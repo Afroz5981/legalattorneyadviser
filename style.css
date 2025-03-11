@@ -1,0 +1,154 @@
+/* === GLOBAL STYLES === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* === HEADER === */
+header {
+    background: #1e293b;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 200px; /* Adjust size as needed */
+    margin-bottom: 10px;
+}
+
+/* Change text color from yellow to light blue */
+header h1 {
+    color: #00bfff; /* Light blue */
+    font-size: 28px;
+}
+
+/* === HERO SECTION === */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #00bfff; /* Light blue */
+    font-weight: bold;
+}
+
+/* === ABOUT US === */
+.about-us {
+    background: #1e293b; /* Dark Blue */
+    padding: 50px;
+    margin: 40px auto;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-us h2 {
+    font-size: 28px;
+    color: #00bfff; /* Light blue */
+    margin-bottom: 15px;
+}
+
+/* === PRACTICE AREAS === */
+.practice-areas {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.practice-areas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.practice-areas li {
+    font-size: 18px;
+    padding: 8px;
+    color: #f8f9fa;
+}
+
+/* === FILE A CLAIM FORM === */
+#file-claim {
+    background: #1e293b;
+    padding: 50px;
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#file-claim h2 {
+    font-size: 26px;
+    color: #00bfff; /* Light blue */
+}
+
+/* FORM INPUTS */
+#file-claim label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d1d5db;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#file-claim input,
+#file-claim select {
+    width: 90%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #00bfff;
+    background: #111827;
+    color: #f8f9fa;
+    font-size: 16px;
+    outline: none;
+}
+
+/* === CHECKBOX STYLING === */
+.checkbox-container {
+    display: flex;
+    align-items: center; /* Aligns checkbox and text properly */
+    gap: 5px; /* Reduce space between checkbox and text */
+    margin-top: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #00bfff; /* Light blue checkbox */
+    cursor: pointer;
+}
+
+/* UPDATED CLAIM BUTTON */
+#file-claim button {
+    background: #00bfff; /* Light blue */
+    color: white;
+    padding: 14px 30px; /* Bigger size */
+    border-radius: 10px;
+    font-size: 20px; /* Larger font */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.5);
+}
+
+#file-claim button:hover {
+    background: #ff9800; /* Orange on hover */
+    color: #111827;
+    transform: scale(1.05);
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+    color: #d1d5db;
+    margin-top: 40px;
+}
