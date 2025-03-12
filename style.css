@@ -32,6 +32,14 @@ header h1 {
     padding: 60px 20px;
 }
 
+/* Fix hero image size */
+.hero-image {
+    max-width: 100%; /* Ensures image doesn't exceed its container */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image */
+}
+
 .hero h2 {
     font-size: 36px;
     color: #00bfff; /* Light blue */
@@ -151,4 +159,24 @@ footer {
     background: #1e293b;
     color: #d1d5db;
     margin-top: 40px;
+}
+
+/* === RESPONSIVE FIXES === */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .hero h2 {
+        font-size: 28px; /* Slightly reduce font size */
+    }
+
+    #file-claim {
+        padding: 30px; /* Adjust form padding */
+    }
+
+    #file-claim input,
+    #file-claim select {
+        width: 100%; /* Full width on smaller screens */
+    }
 }
