@@ -17,56 +17,103 @@
         tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
           '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&l=' +
           new Date().getTime() + Math.random();
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(tf, s);
+
+        tf.onload = function() {
+          var interval = setInterval(function() {
+            var tfField = document.querySelector("#xxTrustedFormCertUrl");
+            if (tfField && tfField.value) {
+              clearInterval(interval);
+              console.log("TrustedForm certificate captured:", tfField.value);
+            }
+          }, 500);
+        };
       })();
     </script>
     <noscript>
       <img src='https://api.trustedform.com/ns.gif' />
     </noscript>
     <!-- End TrustedForm -->
+
+    <script>
+      function handleSubmit(event) {
+          event.preventDefault(); // Prevent default form submission
+          
+          // Hide the form
+          document.getElementById('claim-form').style.display = 'none';
+
+          // Show the thank-you message
+          document.getElementById('thank-you-message').style.display = 'block';
+      }
+    </script>
 </head>
 <body>
     <!-- HEADER -->
 <header>
-    <img src="image/logo.png" alt="Legal Attorney Adviser Logo" class="logo">
+    <img src="logo.png" alt="Legal Attorney Adviser Logo" class="logo">
     <h1>Legal Attorney Adviser</h1>
 </header>
     
    <!-- Hero Section with Image -->
 <section class="hero">
-    <img src="image/hero.jpg" alt="Legal Assistance" class="hero-image">
-
+   <img src="hero.jpg" alt="Legal Assistance" class="hero-image">
     <h2>Get the Legal Help You Deserve</h2>
-    <p>We specialize in helping representing individuals affected by mass tort cases, providing expert legal support and advocacy to ensure justice and fair compensation. Your rights, our mission. Contact us to check if you qualify to file a claim today! </p>
+    <p>We specialize in helping individuals affected by mass tort cases, providing expert legal support and advocacy to ensure justice and fair compensation. Your rights, our mission. Contact us to check if you qualify to file a claim today! </p>
     <button onclick="document.getElementById('file-claim').scrollIntoView();">Start Your Claim</button>
 </section>
     
     <!-- About Us Section -->
 <section class="about-us">
-    <h2>About Us – Legal Attorney Advisor</h2>
-    <p>we believe that every client deserves high-quality legal representation. That's why we are committed to providing our clients with personalized attention, tailored legal solutions, and the highest level of service possible. We believe in fighting for justice and standing up for our clients' rights.</p>
+    <h2>About Us – Legal Attorney Adviser</h2>
+    <p>We believe that every client deserves high-quality legal representation. That's why we are committed to providing our clients with personalized attention, tailored legal solutions, and the highest level of service possible. We believe in fighting for justice and standing up for our clients' rights.</p>
 </section>
     
     <!-- File a Claim Section -->
 <section id="file-claim">
     <h2>File a Claim</h2>
-    <form action="#" method="post">
+
+    <!-- Thank You Message (Hidden Initially) -->
+    <div id="thank-you-message" style="display: none;">
+        <h3>Thank you!</h3>
+        <p>Our expert team will contact you shortly.</p>
+    </div>
+
+    <!-- Form -->
+    <form id="claim-form" action="#" method="post" onsubmit="handleSubmit(event)">
+        <!-- Hidden TrustedForm field -->
+        <input type="hidden" id="xxTrustedFormCertUrl" name="xxTrustedFormCertUrl">
+
         <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name">
+        <input type="text" id="first_name" name="first_name" required>
 
         <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name">
+        <input type="text" id="last_name" name="last_name" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" required>
 
         <label for="case_type">Case Type:</label>
         <select id="case_type" name="case_type">
             <option value="round_up">ROUND UP</option>
             <option value="baby_formula">BABY FORMULA</option>
+            <option value="pfas">PFAS</option>
+            <option value="afff">AFFF</option>
+            <option value="depo_provera">DEPO-PROVERA</option>
+            <option value="indus_asbestos">INDUS ASBESTOS</option>
+            <option value="rideshare">RIDESHARE</option>
+            <option value="hair_relaxer">HAIR RELAXER</option>
+            <option value="zantac">ZANTAC</option>
+            <option value="talcum_powder">TALCUM POWDER</option>
+            <option value="paraquat">PARAQUAT</option>
+            <option value="mva">MVA</option>
+            <option value="mesothelioma">MESOTHELIOMA</option>
+            <option value="wildfire_ca">WILDFIRE CA</option>
+            <option value="paragard">PARAGARD</option>
+            <option value="md_detention">MD DETENTION</option>
         </select>
 
         <div class="checkbox-group">
@@ -105,7 +152,7 @@
         </div>
 
         <!-- Disclaimer -->
-        <p>Legal Attorney Adviser is not a law firm and does not provide legal advice. We connect users with third-party law firms. The information on this site is for general purposes only. Prior results do not guarantee a similar outcome</p>
+        <p>Legal Attorney Adviser is not a law firm and does not provide legal advice. We connect users with third-party law firms. The information on this site is for general purposes only. Prior results do not guarantee a similar outcome.</p>
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
