@@ -8,30 +8,21 @@
     <title>Legal Attorney Adviser</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- TrustedForm -->
+   <!-- TrustedForm -->
 <script type="text/javascript">
   (function() {
     var tf = document.createElement('script');
     tf.type = 'text/javascript';
     tf.async = true;
-    tf.src = 'https://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&l=' + new Date().getTime() + Math.random();
-    
-    var s = document.getElementsByTagName('script')[0];
+    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+      '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&l=' +
+      new Date().getTime() + Math.random();
+    var s = document.getElementsByTagName('script')[0]; 
     s.parentNode.insertBefore(tf, s);
-
-    tf.onload = function() {
-      var interval = setInterval(function() {
-        var tfField = document.querySelector("#xxTrustedFormCertUrl");
-        if (tfField && tfField.value) {
-          console.log("TrustedForm Cert URL:", tfField.value);
-          clearInterval(interval);
-        }
-      }, 500);
-    };
   })();
 </script>
 <noscript>
-  <img src='https://api.trustedform.com/ns.gif' />
+  <img src="https://api.trustedform.com/ns.gif" />
 </noscript>
 <!-- End TrustedForm -->
     <script>
