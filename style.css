@@ -63,23 +63,6 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/* === PRACTICE AREAS === */
-.practice-areas {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.practice-areas ul {
-    list-style: none;
-    padding: 0;
-}
-
-.practice-areas li {
-    font-size: 18px;
-    padding: 8px;
-    color: #f8f9fa;
-}
-
 /* === FILE A CLAIM FORM === */
 #file-claim {
     background: #1e293b;
@@ -117,24 +100,28 @@ header h1 {
     outline: none;
 }
 
-/* === CHECKBOX GROUP FIX === */
+/* === CHECKBOX STYLING === */
 .checkbox-group {
     display: flex;
-    align-items: flex-start; /* Aligns checkbox and text */
-    gap: 10px; /* Space between checkbox and text */
+    align-items: flex-start;
+    gap: 10px;
     margin-top: 10px;
     text-align: left;
-    width: 90%; /* Ensures consistent alignment */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .checkbox-group input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     accent-color: #00bfff; /* Light blue checkbox */
     cursor: pointer;
-    margin-top: 5px; /* Fixes alignment with text */
+    margin-top: 4px;
+}
+
+.checkbox-group label {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #d1d5db;
 }
 
 /* UPDATED CLAIM BUTTON */
@@ -185,15 +172,12 @@ footer {
         width: 100%; /* Full width on smaller screens */
     }
 
-    /* Make checkboxes align properly on smaller screens */
     .checkbox-group {
-        flex-direction: row; /* Keep in line */
-        align-items: center;
-        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     .checkbox-group input[type="checkbox"] {
-        width: 16px;
-        height: 16px;
+        margin-top: 6px;
     }
 }
