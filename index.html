@@ -7,25 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Attorney Adviser</title>
     <link rel="stylesheet" href="style.css">
-    
-   <!-- TrustedForm -->
-<script type="text/javascript">
-  (function() {
-    var tf = document.createElement('script');
-    tf.type = 'text/javascript';
-    tf.async = true;
-    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
-      '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&l=' +
-      new Date().getTime() + Math.random();
-    var s = document.getElementsByTagName('script')[0]; 
-    s.parentNode.insertBefore(tf, s);
-  })();
-</script>
-<noscript>
-  <img src="https://api.trustedform.com/ns.gif" />
-</noscript>
-<!-- End TrustedForm -->
-
 </head>
 <body>
     <!-- HEADER -->
@@ -60,9 +41,6 @@
 
     <!-- Form -->
     <form id="claim-form">
-        <!-- Hidden TrustedForm field -->
-        <input type="hidden" id="xxTrustedFormCertUrl" name="xxTrustedFormCertUrl">
-
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name" required>
 
@@ -114,40 +92,6 @@
         <p>📧 <a href="mailto:peter@legalattorneyadviser.com">peter@legalattorneyadviser.com</a></p>
     </div>
 </footer>
-
-<!-- JavaScript for Form Submission -->
-<script>
-document.getElementById("claim-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    let formData = new FormData(this);
-
-    // Add additional data: IP address, device info, URL, unique ID, and TrustedForm certificate
-    formData.append("ip_address", "Fetching..."); // Will be updated dynamically
-    formData.append("device_info", navigator.userAgent);
-    formData.append("url", window.location.href);
-    formData.append("unique_id", Date.now()); // Unique ID based on timestamp
-    formData.append("xxTrustedFormCertUrl", document.getElementById("xxTrustedFormCertUrl").value || "Not Captured");
-
-    fetch("https://script.google.com/macros/s/AKfycbwNLvYn8IpXh6tRTLHB-dsvTss9efgxWaWpnyZiT3T4ytBvYMkQxQXUJf9tyqUTI6Kr/exec", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        console.log(data); // Log response (for debugging)
-        document.getElementById("claim-form").style.display = "none";
-        document.getElementById("thank-you-message").style.display = "block";
-    })
-    .catch(error => console.error("Error:", error));
-
-    // Fetch user's IP address
-    fetch("https://api64.ipify.org?format=json")
-    .then(response => response.json())
-    .then(data => formData.set("ip_address", data.ip))
-    .catch(error => console.error("IP Fetch Error:", error));
-});
-</script>
 
 </body>
 </html>
