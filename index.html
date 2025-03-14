@@ -99,8 +99,11 @@
 
         
 
-        <button type="submit">Submit</button>
-    </form>
+       <!-- Add this hidden field to store TrustedForm certificate -->
+    <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl">
+    
+    <button type="submit">Submit</button>
+</form>
 </section>
 
     <!-- Footer Section -->
@@ -113,5 +116,19 @@
     </div>
 </footer>
 
+    </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      var tfField = document.querySelector("#xxTrustedFormCertUrl");
+      if (tfField && window.TrustedForm && TrustedForm.certUrl) {
+        tfField.value = TrustedForm.certUrl;
+      }
+    }, 2000); // Wait 2 seconds for TrustedForm to load
+  });
+</script>
+
+</body>
 </body>
 </html>
