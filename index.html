@@ -73,12 +73,6 @@
 <section id="file-claim">
     <h2>File a Claim</h2>
 
-    <!-- Thank You Message (Hidden Initially) -->
-    <div id="thank-you-message" style="display: none;">
-        <h3>Thank you!</h3>
-        <p>Our expert team will contact you shortly.</p>
-    </div>
-
     <!-- Form -->
     <form id="claim-form" method="post" action="https://b8c6082d012004fe8b3b8b8b9c8d6695.m.pipedream.net">
         <label for="first_name">First Name:</label>
@@ -113,15 +107,15 @@
             <option value="md_detention">MD DETENTION</option>
         </select>
         <div class="terms-container">
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms" class="terms-text">
-            By selecting this box, I expressly consent to receive auto-dialed calls and texts at the number provided above for the purposes of facilitating my retention of counsel. 
-            I acknowledge that I am not required to provide this consent as a condition of retaining counsel or utilizing services. 
-            This request and permission override any Do-not-Call registry rules or list, or any other applicable law or regulation. 
-            Those responding to this ad confirm they have carefully read and consent to the Terms of Use and Privacy Policy contained in any links, website or publication by the law firm and/or its representatives, marketing or otherwise. 
-            I understand that submitting this information does not create an attorney-client relationship.
-        </label>
-    </div>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms" class="terms-text">
+                By selecting this box, I expressly consent to receive auto-dialed calls and texts at the number provided above for the purposes of facilitating my retention of counsel. 
+                I acknowledge that I am not required to provide this consent as a condition of retaining counsel or utilizing services. 
+                This request and permission override any Do-not-Call registry rules or list, or any other applicable law or regulation. 
+                Those responding to this ad confirm they have carefully read and consent to the Terms of Use and Privacy Policy contained in any links, website or publication by the law firm and/or its representatives, marketing or otherwise. 
+                I understand that submitting this information does not create an attorney-client relationship.
+            </label>
+        </div>
 
         
 
@@ -141,7 +135,7 @@
         <p>📧 <a href="mailto:peter@legalattorneyadviser.com">peter@legalattorneyadviser.com</a></p>
     </div>
 </footer>
-    <script>
+<script>
         document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("claim-form"); // Replace with your form ID
 
@@ -176,8 +170,7 @@
         });
     });
 });
-    </script>
+</script>
 
-</body>
 </body>
 </html>
