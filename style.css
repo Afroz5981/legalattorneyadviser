@@ -82,7 +82,7 @@ header h1 {
 
 #file-claim input,
 #file-claim select {
-    width: 100%;
+    width: 97%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #00bfff;
@@ -162,7 +162,7 @@ footer {
 
     #file-claim input,
     #file-claim select {
-        width: 100%;
+        width: 97%;
     }
 
     .checkbox-group {
