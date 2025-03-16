@@ -7,32 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Attorney Adviser</title>
     <link rel="stylesheet" href="style.css">
-    <!-- TrustedForm Script -->
-<script type="text/javascript">
-  <!-- TrustedForm -->
-<script type="text/javascript">
-  (function() {
-    var tf = document.createElement('script');
-    tf.type = 'text/javascript';
-    tf.async = true;
-    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
-      '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&identifier=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
-      new Date().getTime() + Math.random();
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
-  })();
-</script>
-<noscript>
-  <img src='https://api.trustedform.com/ns.gif' />
-</noscript>
-<!-- End TrustedForm -->
-</script>
-
-<noscript>
-  <img src="https://api.trustedform.com/ns.gif" />
-</noscript>
-    
+    <!-- TrustedForm -->
+    <script type="text/javascript">
+      (function() {
+        var tf = document.createElement('script');
+        tf.type = 'text/javascript';
+        tf.async = true;
+        tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+          '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&identifier=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
+          new Date().getTime() + Math.random();
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+      })();
+    </script>
+    <noscript>
+      <img src='https://api.trustedform.com/ns.gif' />
+    </noscript>
+    <!-- End TrustedForm -->
 </head>
 <body>
+
     <!-- HEADER -->
 <header>
     <img src="logo.png" alt="Legal Attorney Adviser Logo" class="logo">
@@ -64,7 +57,7 @@
     </div>
 
     <!-- Form -->
-    <form id="claim-form">
+    <form id="claim-form" action="post" url="https://b8c6082d012004fe8b3b8b8b9c8d6695.m.pipedream.net">
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name" required>
 
@@ -123,17 +116,6 @@
 </footer>
 
     </footer>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-      var tfField = document.querySelector("#xxTrustedFormCertUrl");
-      if (tfField && window.TrustedForm && TrustedForm.certUrl) {
-        tfField.value = TrustedForm.certUrl;
-      }
-    }, 2000); // Wait 2 seconds for TrustedForm to load
-  });
-</script>
 
 </body>
 </body>
